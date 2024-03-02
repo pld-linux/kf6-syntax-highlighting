@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.249.0
+%define		kdeframever	6.0
 %define		qtver		5.15.2
 %define		kfname		syntax-highlighting
 
 Summary:	Syntax highlighting
 Name:		kf6-%{kfname}
-Version:	5.249.0
-Release:	0.1
+Version:	6.0.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/unstable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	37f9b1c6afa8e5ea3f52bb21478598c1
+Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
+# Source0-md5:	2503b86bd37eb4d9e4bf42a69f0da32a
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 3.16
 BuildRequires:	ninja
@@ -71,11 +71,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ksyntaxhighlighter6
 %ghost %{_libdir}/libKF6SyntaxHighlighting.so.6
-%attr(755,root,root) %{_libdir}/libKF6SyntaxHighlighting.so.5.*.*
+%attr(755,root,root) %{_libdir}/libKF6SyntaxHighlighting.so.*.*
 %{_datadir}/qlogging-categories6/ksyntaxhighlighting.categories
 %{_datadir}/qlogging-categories6/ksyntaxhighlighting.renamecategories
 %dir %{_libdir}/qt6/qml/org/kde/syntaxhighlighting
-%{_libdir}/qt6/qml/org/kde/syntaxhighlighting/libkquicksyntaxhighlightingplugin.so
+%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/syntaxhighlighting/libkquicksyntaxhighlightingplugin.so
 %{_libdir}/qt6/qml/org/kde/syntaxhighlighting/qmldir
 %{_libdir}/qt6/qml/org/kde/syntaxhighlighting/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/syntaxhighlighting/kquicksyntaxhighlightingplugin.qmltypes
