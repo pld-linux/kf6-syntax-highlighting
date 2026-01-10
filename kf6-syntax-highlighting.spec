@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.21
+%define		kdeframever	6.22
 %define		qtver		5.15.2
 %define		kfname		syntax-highlighting
 
 Summary:	Syntax highlighting
 Name:		kf6-%{kfname}
-Version:	6.21.0
+Version:	6.22.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	7e6b1e408523d44eca97a6b8ad5e29b8
+# Source0-md5:	78255eb31f13325d55a2a37b88b60458
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 3.16
 BuildRequires:	ninja
