@@ -6,6 +6,7 @@
 %define		kfname		syntax-highlighting
 
 Summary:	Syntax highlighting
+Summary(pl.UTF-8):	Podświetlanie składni
 Name:		kf6-%{kfname}
 Version:	6.26.0
 Release:	1
@@ -28,6 +29,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Syntax highlighting.
+
+%description -l pl.UTF-8
+Podświetlanie składni.
 
 %package devel
 Summary:	Header files for %{kfname} development
